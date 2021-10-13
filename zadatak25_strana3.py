@@ -3,15 +3,15 @@ Napisati kod koji za dati redni broj mjeseca (od 1 do 12) i datu godinu štampa 
 datom mjesecu. 
 """
 
-print("Januar, Februar, Mart, April, Maj, Jun, Jul, Avgust, Septembar, Oktobar, Novembar, Decembar")
 
-mjesec = input("Unesite ime mjeseca: ")
+mjesec = input("Unesite redni broj mjeseca: ")
 
-if mjesec == "Februar":
-    print("Broj dana: 28/29 dana")
-elif mjesec in ("April", "Jun", "Septembar", "Novembar"):
-    print("Broj dana: 30 dana")
-elif mjesec in ("Januar", "Mart", "Maj", "Jul", "Avgust","Oktobar","Decembar"):
-    print("Broj dana: 31")   
+mjeseci_sa_31 = [1, 3, 5, 7, 8, 10, 12]
+mjeseci_sa_30 = [2, 4, 6, 11]
+
+if mjesec in mjeseci_sa_31:
+    print("mjesec ima 31 dan")
+elif mjesec in mjeseci_sa_30:
+    print("mjesec ima 30 dana")
 else:
-    print("Unijeli ste pogresano ime mjeseca")      
+    print("28 ili 29")
